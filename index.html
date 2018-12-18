@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wikipedia Viewer FreeCodeCamp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR HEADER -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Wikipedia Viewer</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav d-inline-block">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://robfairclough.github.io"
+                id="portfolio-button"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END HEADER -->
+
+    <div class="vertical-center main-content">
+      <div class="container bg-light">
+        <div class="row bg-dark">
+          <!-- -header -->
+          <div class="col-12 mx-auto">
+            <h2 class="text-primary text-center">Search Wikipedia</h2>
+          </div>
+        </div>
+        <!-- end header -->
+
+        <!-- Random article -->
+        <div class="row vertical-buffer">
+          <div class="mx-auto">
+            <a
+              href="https://en.wikipedia.org/wiki/Special:Random"
+              target="_blank"
+              ><button class="btn btn-primary mx-auto">
+                Random Article
+              </button></a
+            >
+            <button class="btn btn-primary mx-auto" id="geo-search">
+              Articles near you
+            </button>
+          </div>
+        </div>
+        <!-- end random article -->
+        <div class="row vertical-buffer">
+          <div class="mx-auto">
+            <!-- add form for submit listener -->
+            <div class="btn btn-primary fa fa-search" id="search-button"></div>
+          </div>
+        </div>
+        <div class="row vertical-buffer">
+          <div class="mx-auto"><table id="results-table"></table></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <ul class="social">
+          <li><a href="#" class="fa fa-facebook" target="_blank"></a></li>
+          <li>
+            <a
+              href="https://www.twitter.com/robfairclough"
+              class="fa fa-twitter"
+              target="_blank"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://codepen.io/robfairclough"
+              class="fa fa-codepen"
+              target="_blank"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/robfairclough"
+              class="fa fa-github"
+              target="_blank"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/robfairclough"
+              class="fa fa-instagram"
+              target="_blank"
+            ></a>
+          </li>
+          <li><i>© Rob Fairclough 2018</i></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- END FOOTER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
