@@ -9,6 +9,12 @@ const handleSearchClick = e => {
   document
     .getElementById("second-search")
     .addEventListener("click", handleSearch);
+
+  document.addEventListener("keydown", e => {
+    if (e.keyCode === 13) {
+      handleSearch();
+    }
+  });
 };
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", handleSearchClick);
@@ -34,6 +40,8 @@ const handleSearch = e => {
   xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
   xhr.send(params);
   // logs the results of the search
+  let table = document.getElementById("results-table");
+  table.innerHTML = "loading...";
   xhr.onreadystatechange = () => {
     // an array in format [0: "searchvalue", 1: [search result names], 2: [search result summaries], 3: [result URLs]]
     // gives top 10 results
@@ -41,7 +49,6 @@ const handleSearch = e => {
     console.log(results);
 
     // clears previous results
-    let table = document.getElementById("results-table");
     if (!results[1].length) {
       table.innerHTML = "";
       let row = table.insertRow(0);
